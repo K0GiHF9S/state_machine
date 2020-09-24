@@ -1,0 +1,35 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "(Winows)起動",
+        "type": "cppvsdbg",
+        "program": "${workspaceFolder}/x64/Debug/state_machine.exe",
+        "request": "launch",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "preLaunchTask": "build"
+    }, {
+        "name": "(Linux)起動",
+        "type": "cppdbg",
+        "program": "${workspaceFolder}/a.out",
+        "request": "launch",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [{
+            "description": "gdb の再フォーマットを有効にする",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        }],
+        "preLaunchTask": "build"
+    }]
+}
